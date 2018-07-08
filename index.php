@@ -26,6 +26,7 @@ function getUser() {
 $serializer = SerializerBuilder::create()
     ->setSerializationContextFactory(function () {
         return SerializationContext::create()
+            ->enableMaxDepthChecks()
             ->setSerializeNull(true)
         ;
     })
